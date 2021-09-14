@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 from colored import fg, attr
 from distutils.util import strtobool
-
+import os
+import random
 
 def Run(input1, input2, input3, input4):
     print("Hello World!")
@@ -13,3 +14,7 @@ def Run(input1, input2, input3, input4):
         print(f"{fg(3)}'{s}'.{attr(0)}")
     print(f"{fg(1)}Today, I want to automate {input3}.{attr(0)}")
     print(f"{fg(3)}My secret is '{input4}'.{attr(0)}")
+
+    n = str(random.random())
+    cmd = "mkdir test" + n
+    os.system(cmd)
